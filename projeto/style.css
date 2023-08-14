@@ -53,7 +53,8 @@ body * {
 }
 #container {
 
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     margin: 56px auto 0px;  /* ao passar varios parametros ao comando margin ele começa a considerar todos os lados tipo rught left top e bottom em uma só linha se colocar os 4 é sentido horario se colacar menos tem outras regras */
     padding: 24px;
 }
