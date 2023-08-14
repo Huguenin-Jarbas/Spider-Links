@@ -1,0 +1,207 @@
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5) ;
+    --surface-color: ;
+    --surface-color: rgba(255, 255, 255, 0.10) ;
+    --surface-color-hover:  rgba(255, 255, 255, 0.05);
+    --highlight-hover: rgba(255, 255, 255, 0.2);
+    --switch-bt-url: url(./assets/sun.svg) ; 
+
+    --border-color: rgb(219, 3, 3);
+    --border-color1: rgb(219, 3, 3, 0.3);
+}
+
+.light{
+    --text-color: black;
+    --bg-url: url(./assets/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.10) ;
+    --surface-color-hover:  rgba(0, 0, 0, 0.02);
+    --highlight-hover: hwb(0 0% 100% / 0.1) ;
+    --switch-bt-url: url(./assets/moon.svg); 
+
+    --border-color: rgb(0, 84, 211) ;
+    --border-color1: rgb(0, 84, 211, 0.3) ;
+}
+
+body{
+   /* background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    da pra fazer isso tudo acima numa só linha 
+
+    background: color image repeat pozition /size 
+    isso aqui são a ordem de propriedades do comando background
+    abaixo na pratica 
+    */
+
+    background: var(--bg-url)  no-repeat top center /cover ;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+}
+#container {
+
+    width: 360px;
+    margin: 56px auto 0px;  /* ao passar varios parametros ao comando margin ele começa a considerar todos os lados tipo rught left top e bottom em uma só linha se colocar os 4 é sentido horario se colacar menos tem outras regras */
+    padding: 24px;
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+
+}
+
+#profile img {
+    display:block;
+    width: 112px;
+    margin: auto;
+}
+#profile p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--border-color);
+}
+
+#switch {
+    width: 64px;
+    position: relative; /*prede o position absolute do elemto filho dentro dos limetes relativos desse elemento*/
+
+    margin: 4px auto;
+}
+
+
+#switch button{
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-bt-url) no-repeat center ;
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: 1;  /*me permite fazer sobreposiçao de camadas e colocar elementos sobre outros*/
+
+    right: 0;
+    transform: translateY(-50%); /*move o elemento no eixo y*/
+    top: 50%; /*colocar o top 50% dps do -50% da linha de cima é uma estrategia que permie o elemento ficar alinhado*/
+}
+
+.light #switch button{
+    left:0;
+    right: initial;
+
+}
+#switch button:hover{
+    border: 1.5px solid;
+    background: var(--border-color) var(--switch-bt-url) no-repeat center ;;
+}
+
+#switch span{
+    display: block; /*por padrao ele vem display in-line q n funciona o width e outras propriedades */
+    width: 64px;
+    height: 24px;
+    border-radius: 18px;
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    
+}
+
+#switch span:hover{
+    border: 1.5px solid;
+    background: var(--border-color1);
+}
+
+
+
+
+
+/* links  ´´´´*/
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+
+}
+
+ul li a {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+
+    background:  var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 18px ;
+
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.2s;
+}
+
+/*Pseudo-selector: mouse houver mt legal e sem js*/
+
+ul li a:hover {
+    color: var(--border-color);
+    border: 1.5px solid var(--border-color);
+    background: var(--surface-color-hover);
+}
+
+#social {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;
+
+}
+
+#social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+     
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#social a:hover{
+   
+    background: var(--border-color1);
+   
+   
+}
+
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+
+}
+footer p {
+    font-size: 10px;
+
+}
