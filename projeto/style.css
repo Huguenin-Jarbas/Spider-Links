@@ -10,7 +10,7 @@
     --stroke-color: rgba(255, 255, 255, 0.5) ;
     --surface-color: ;
     --surface-color: rgba(255, 255, 255, 0.10) ;
-    --surface-color-hover:  rgba(255, 255, 255, 0.05);
+    --surface-color-hover:  rgba(219, 3, 3, 0.05);
     --highlight-hover: rgba(255, 255, 255, 0.2);
     --switch-bt-url: url(./assets/sun.svg) ; 
 
@@ -23,7 +23,7 @@
     --bg-url: url(./assets/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.10) ;
-    --surface-color-hover:  rgba(0, 0, 0, 0.02);
+    --surface-color-hover:  rgba(0, 84, 211, 0.15);
     --highlight-hover: hwb(0 0% 100% / 0.1) ;
     --switch-bt-url: url(./assets/moon.svg); 
 
@@ -100,16 +100,17 @@ body * {
     right: 0;
     transform: translateY(-50%); /*move o elemento no eixo y*/
     top: 50%; /*colocar o top 50% dps do -50% da linha de cima é uma estrategia que permie o elemento ficar alinhado*/
+    animation: slide-out 0.4s forwards;
 }
 
 .light #switch button{
-    left:0;
-    right: initial;
+    animation: slide-in 0.4s forwards;
 
 }
 #switch button:hover{
+    outline: 8px solid var(--border-color1); 
+    /* o comando que eu tava atras aaaaaaaaa */
     border: 1.5px solid;
-    background: var(--border-color) var(--switch-bt-url) no-repeat center ;;
 }
 
 #switch span{
@@ -218,4 +219,21 @@ footer p {
         --bg-url: url(./assets/bg-desktop-light.jpg);
     }
 
+}
+/* animacoes */
+@keyframes slide-in {
+    from{
+        right:0;
+    }
+    to{
+        right:50%;
+    }
+}
+@keyframes slide-out {
+    from{
+        right:50%;
+    }
+    to{
+        right:0;
+    }
 }
