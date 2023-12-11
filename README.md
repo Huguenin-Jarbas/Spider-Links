@@ -1,8 +1,10 @@
 <h1 align="center"> Spider Links </h1>
 
 <p align="center">
+LINK DO PROJETO RODANDO:  https://huguenin-jarbas.github.io/Spider-Links/
+  <br>
 Programa feito como projeto DevLinks no curso Discover da Rocketseat. liks para o projeto original abaixo <br/>
-<a href="https://lp.rocketseat.com.br/devlinks/inscricao?utm_source=github&utm_medium=descricao&utm_campaign=capture-devlinks&utm_term=organic&utm_content=descricao-github-mayk-brito">Estude esse projeto em formato de vídeo clicando aqui.</a>
+  
 </p>
 
 <p align="center">
@@ -19,7 +21,7 @@ Programa feito como projeto DevLinks no curso Discover da Rocketseat. liks para 
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".github/Cover.png" width="100%">
+
 </p>
 
 ## 🚀 Tecnologias
